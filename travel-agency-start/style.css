@@ -8,9 +8,11 @@
 
 /* smooth scroll may not be user friendly */
 
-/* html {
-  scroll-behavior: smooth;
-} */
+/* html { */
+
+/*   scroll-behavior: smooth; */
+
+/* } */
 
 body {
   background-color: #fff;
@@ -27,7 +29,6 @@ header {
 
   /*  https://caniuse.com/css-sticky */
 
-  /* sticky it! */
   position: fixed;
   top: 0;
   z-index: 2;
@@ -72,6 +73,11 @@ header {
   height: 100%;
 }
 
+.reserve-button a {
+  color: white;
+  text-decoration: none;
+}
+
 .menu-item a {
   text-decoration: none;
   color: white;
@@ -111,11 +117,6 @@ header {
   background-color: #4c5bd0;
   box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
   z-index: 1;
-}
-
-.reserve-button a {
-  color: white;
-  text-decoration: none;
 }
 
 /* ----------- Main  ---------------- */

@@ -6,26 +6,11 @@ const swiper = new Swiper('.swiper-container', {
   speed: 5000,
   fadeEffect: {
     crossFade: true
-  }
+  },
   autoplay: {
-    delay: 1000,
+    delay: 3000,
   },
 
-  // // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // // Navigation arrows
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
-
-  // // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 });
 
 var scroll = new SmoothScroll('a[href*="#"]');
@@ -33,6 +18,7 @@ var scroll = new SmoothScroll('a[href*="#"]');
 flatpickr('.datepicker', {
   minDate: 'today'
 });
+
 
 window.addEventListener('scroll', function () {
   // console.log(window.scrollY);
@@ -43,12 +29,14 @@ window.addEventListener('scroll', function () {
   }
 });
 
+
 // a const kulcsszóval létrehozott változókat nem lehet később felülírni...
 const endValue = 567;
 const counter = document.querySelector('.counter');
-// a let kucsszóval létrehozott változókat később felül lehet írni...
+// a let kulcsszóval létrehozott változókat később felül lehet írni...
 let alreadyPlayed = false;
 let currentValue = 0;
+
 
 const observer = new IntersectionObserver(function (entries) {
   if (entries[0].isIntersecting === true && alreadyPlayed === false) {
@@ -60,8 +48,7 @@ const observer = new IntersectionObserver(function (entries) {
       }
       counter.innerText = currentValue;
       currentValue = currentValue + 1;
-    }, 2);
-    // 2 milliszekundum
+    }, 2); // 2 miliszekundum
   }
 
 });
