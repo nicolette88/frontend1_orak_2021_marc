@@ -73,6 +73,11 @@ body {
   margin: 0;
 }
 
+.comments-count {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
 .main-title,
 .subheading,
 .main p,
@@ -104,14 +109,16 @@ body {
 
 .quote {
   font-style: italic;
+  position: relative;
 }
 
 .quote::before {
-}
-
-.comments-count {
-  margin-top: 1rem;
-  font-size: 2rem;
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: blue;
+  content: "";
+  left: -30px;
 }
 
 /* --------------------------------  comment section is grid  --------------------------------- */
@@ -139,9 +146,6 @@ body {
   border-bottom: none;
 }
 
-.comment-text {
-}
-
 .comments-count .fa-comment {
   padding-right: 10px;
 }
@@ -167,12 +171,13 @@ body {
 
 .form-container {
   grid-column: content-start / content-end;
-   /* another grid inside the grid */
+
+  /* another grid inside the grid */
   display: grid;
   grid-template-columns: 60% 35%;
   grid-column-gap: 5%;
   grid-row-gap: 20px;
- }
+}
 
 input[type="text"],
 textarea {
